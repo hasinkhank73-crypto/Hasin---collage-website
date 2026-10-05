@@ -1,246 +1,377 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hasin Khan - Collage website</title>
+<title>Hain Khan-Student Website</title>
 
-<style>
-body {
-     font-family: Arial;
-     margin: 0;
-     background: #f5f7fa;
-     color: #222;
+      <style>
+      body {
+      margin: 0;
+      font-family: Arial,sans-serif;
+      background:
+      #f50ff;
+      color: #222;
+      }
+      
+      header {
+      background:
+      liner-gradient(135deg, #6a1b9a, #ab47bc);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+      }
+      
+      header h1 {
+      font-size: 38px;
+      marign: 10px;
+      }
+      
+      nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      }
+      
+      nav a {
+      color: #6a1b9a;
+      text-decoration:
+ none;
+      font-weight: bold;
+      marign: 8px;
+      }
+      
+      section {
+          background: white;
+          width: 85%;
+          max-width: 900px;
+          margin: 25px auto;
+          padding: 25px;
+          border-radius: 18px;
+          box-shadow: 0 4px 12px #ccc;
+          }
+          h2 {
+          color: #7bfa2;
+          }
+          .card {
+          display:
+          inline-block;
+          background:
+          #f0e6ff;
+          padding: 15px;
+          margin: 7px;
+          border-radius: 12px;
+          font-weight: bold;
+          }
+          input {
+          padding: 10px;
+          margin: 5px;
+          border: 1px solid #aaa;
+          border-radius: 8px;
+          }
+          button {
+          padding: 10px 18px;
+          margin: 5px;
+          border: none;
+          border-radius: 20px;
+          background: #7b1ffa2;
+          color: white;
+          cursor: pointer;
+          }
+          button:hover {
+          background: #4a148c;
+          }
+          .result {
+          font-weight: bold;
+          margin-top: 12px;
+          }
+          footer {
+          background: #6a1b9a;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          }
+          </style>
+          </head>
+          
+          <body>
+          
+          <header>
+          <h1>✨ Hasin Khan✨</h1>
+          <p>🎓 BCA Student | 💻 Programming | 📗 Study & Projects</p>
+          </header>
+          <nav>
+          <a href="#home">Home</a>
+          <a href="#study">Study</a>
+          <a href="#tools">Student Tools</a>
+          <a href="#projects">Projects</a>
+          </nav>
+          
+          <section id="home">
+          <h2>🏠 Welcome</h2>
+          <p>Welcome to my personal collage website!</p>
+          <p>This website is made for study, programming and useful student tools.</p>
+          </section>
+          
+          <section id="study">
+          <h2>📔 My Study</h2>
+          
+          <div class="card">🐍 Python</div>
+          <div class="card">💻 c Programming</div>
+          <div class="card">💪 Java</div>
+          <div class="card">📗 DBMS</div>
+          <div class="card">🔮 HTML</div>
+          <div class="card">🍕 CSS</div>
+          </section>
+          
+          <section> id="tools">
+          <h2>🔨 Student Tools</h2>
+          
+          <h3>🧮 Calculator</h3>
+          
+          <input type="number" id="num1" placeholder="First number">
+          <input type="number" id="num2 placeholder="Second number">
+          <br>
+          
+          <button
+          onclick="calculate(' + ')">+</button>
+          <button
+          onclick="calculate(' +')">-</button>
+          <button
+          onclick="calculate(' * ')">*</button>
+          <button
+          onclick="calculate(' / ')">/<button
+          <p class="result" id="calcResult"></p>
+          
+          <hr>
+          
+          <h3>💯 Percentage Calculator</h3>
+          <input type="number" id="marks" placeholder="Your marks">
+          <input type="number" id="total" placeholder="Total marks">
+          <br>
+          
+          <button
+          onclick="percentage()">Calculare Percentage</button>
+          
+          <p class="result" id="percentageResult"></p>
+          
+          <hr>
+          
+          <h3>🎓 Grade Calculator</h3>
+          
+          <input type="number" id="gradeMarks"
+          placeholder="Enter matrks">
+          <br>
+          
+          <button
+          onclick="grade()">Check Grade</button>
+          
+          <p class="result" id="gradeResult">/p>
+          </section>
+          
+          <section id="projects">
+          <h2>💻 My Projects</h2>
+          
+          <div class="card">🔮 Personal Website</div>
+          <div class="card">🐍 Python Practies</div>
+          <div class="card">💻 C Programs</div>
+          <div class="card">📗 DBMS Practies</div>
+          </section>
+          
+          <section>
+          <h2>💡 Programming Examples</h2>
+          
+          <p><bPython:</b></p>
+          
+          <pre>
+          marks = 75
+          
+          if marks >= 40:
+          print("Pass")
+          else:
+          print("False")
+          </pre>
+          
+          <p><b>C:</b></p>
+          
+          <pre>
+          #include &1t;stdio.h&gt;
+          
+          int main() {
+          printf("Hello Hasin!");
+          return 0;
+          }
+          </ppre>
+          </section>
+          
+          <footer>
+          <p>©️ 2026 Hasin Khan</p>
+          <p>Learning coding
+          Creating🚀</p>
+          </footer>
+          
+          <script>
+          
+          function calculate(operator) {
+          
+          let a =
+          Number(document.getElementById("num1").value);
+          let b =
+          Number(document.getElementById("num2").value);
+          let result;
+          
+          if (operator =="+") {
+          result = a + b;
+          }
+          else if (operator =="-") {
+          result = a - b;
+          }
+          else if (operator =="*") {
+          result =  a * b;
+          }
+          else if (operator =="/")  {
+          if (b == 0) {
+          result = "Cannoy divide ny zero";
+          } else {
+          result = a / b;
+          }
+          }
+          document.getElementById("calcResult").innerHTML = "Result:" + result;
+          }
+          
+          function percentage() {
+          
+          let marks = Number(document.getElementById("marks").value);
+          let total = Number(document.getElementById("total").value);
+          
+          if (total <= 0) {
+          document.getElementById("percentageResult").innerHTML = "please enter valid total marks.";
+          return;
+          }
+          
+          let result = (marks / total) * 100;
+          
+          document.getElementById("percentageResult").innerHTML = "percentage:" + result.toFixed(2) + "%";
+          }
+          
+          function grade() {
+          
+          let marks = Number(document.getElimentById("gradeMarks").value);
+          let result;
+          
+          if (marks >= 90) {
+          result = "Grade A+";
+          }
+          
+          else if (marks >= 80) {
+          result = "Grade A";
+          }
+          
+          else if (marks >= 70) {
+          result = "Grade B";
+          }
+          
+          else if (marks >= 60) {
+          result = "Grade C";
+          }
+          else if (marks >= 40) {
+          result = "Pass";
+          }
+          
+          else {
+          result = "Fail";
+          }
+          
+          document.getElementByID("gradeResult").innerHTML = result;
+          }
+          
+          </script>
+          
+          </body>
+          </html>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+         
+          
      
-     }
-     
-     header {
-           background: #6a1b9a;
-           color: white;
-           text-align: center;
-           padding: 30px;
-           
-           }
-           
-           nav {
-              background: #4a148c;
-              text-align: center;
-              padding: 15px;
-              
-              }
-              
-              nav a {
-                  color: white;
-                  text-decoration: none;
-                  marign: 15px;
-                  font-weight: bold;
-                  
-                  }
-                  
-                  section {
-                        background: white;
-                        margin: 20px;
-                        padding: 25px;
-                        border-radius: 12px;
-                        }
-                        h2 {
-                        color: #6a1b9a;
-                        }
-                        
-                        .Project {
-                            background: #f3e5f5;
-                            padding: 15px;
-                            marign: 10px 0;
-                            border-radius: 8px;
-                            }
-                            
-                            footer {
-                                background: #4a148c;
-                                color: white;
-                                text-align: center;
-                                padding: 20px;
-                                }
-                                </style>
-                                </head>
-                                <body>
-                                <header>
-                                    <h1>Hasin Khan</h1>
-                                    <p>🎓 BCA Student | 💻 Programming | 📔 Study & Projects</p>
-                                    </header
-                                    <nav>
-                                <a href="#home">Home</a>
-                                <a htef="#collage">Collage</a>
-                                <a href="#study">study</a>
-                                <a href="#projects">projects</a>
-                                <a htef="#contact">contact</a>
-                                </nav>
-                                
-                                <section id="home">
-                                <h2>🏠 Home</h2>
-                                <p>welcome to my personal collage website.</p>
-                                </section>
-                                
-                                <section id="collage">
-                                <h2>🎓 About collage</h2>
-                                <p>This website contains my collage study information, projects and academic work.</p>
-                                </section>
-                                
-                                <section id="study">
-                                <h2>📗 Study</h2>
-                                <p> MY BCA subjects and study material:</p>
-                                <ul>
-                                
-                                <li>Python</li>
-                                <li>C Programming</li>
-                                <li>Java</li>
-                                <li>DBMS</li>
-                                <li>HTML & CSS</li>
-                                </ul>
-                                </section>
-                                
-                                <section id="projects">
-                                <h2>💻 my projects</h2>
-                                
-                                <div class="project">
-                                <h3>Python Project</h2>
-                                <p>my python programming practies and projects.</p>
-                                </div>
-                                
-                                <div> class="project">
-                                <h3>HTML website</h3>
-                                <p> My first personal collage website.</p>
-                                </div>
-                                
-                                </section>
-                                
-                                <section>
-                                <h2>📞 Contact</h2>
-                                <p>Email: my Email</p>
-                                <p>Student: Hasin Khan</p>
-                                </section>
-                                
-                                <footer>
-                                <p>📧 2026 Hasin Khan | collage website</p>
-                                footer>
-                                
-                                </body>
-                                </html>
-                       
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
